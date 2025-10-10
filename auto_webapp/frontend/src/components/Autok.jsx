@@ -16,7 +16,7 @@ function Autok() {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold text-center text-indigo-800">Eladó autóink</h2>
+      <h2 className="text-3xl my-5 font-bold text-center text-indigo-800">Eladó autóink</h2>
       <div className="flex flex-row flex-wrap items-center justify-center">
         {
           autok.map((auto,i)=>(<Auto key={i} auto={auto} />))

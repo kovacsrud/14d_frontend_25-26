@@ -1,44 +1,68 @@
 {
-    "autok":[
-        {
-            "id":1,
-            "marka":"Skoda",
-            "tipus":"Octavia",
-            "rendszam":"PPE-675",
-            "gyartasiev":"2008",
-            "szin":"szürke"
-        },
-        {
-            "id":2,
-            "marka":"Skoda",
-            "tipus":"Fabia",
-            "rendszam":"IHM-229",
-            "gyartasiev":"2009",
-            "szin":"kék"
-        },
-        {
-            "id":3,
-            "marka":"Dacia",
-            "tipus":"Sandero",
-            "rendszam":"NKL-118",
-            "gyartasiev":"2010",
-            "szin":"fekete"
-        },
-        {
-            "id":4,
-            "marka":"Mitsubishi",
-            "tipus":"Lancer",
-            "rendszam":"RKL-611",
-            "gyartasiev":"2011",
-            "szin":"fehér"
-        },
-        {
-            "id":5,
-            "marka":"Toyota",
-            "tipus":"Auris",
-            "rendszam":"AIFG-089",
-            "gyartasiev":"2008",
-            "szin":"kék"
-        }
-    ]
+  "autok": [
+    {
+      "id": "1",
+      "marka": "Skoda",
+      "tipus": "Octavia",
+      "rendszam": "PPE-675",
+      "gyartasiev": "2008",
+      "szin": "szürke"
+    },
+    {
+      "id": "2",
+      "marka": "Skoda",
+      "tipus": "Fabia",
+      "rendszam": "IHM-229",
+      "gyartasiev": "2009",
+      "szin": "kék"
+    },
+    {
+      "id": "3",
+      "marka": "Dacia",
+      "tipus": "Sandero",
+      "rendszam": "NKL-118",
+      "gyartasiev": "2010",
+      "szin": "fekete"
+    },
+    {
+      "id": "4",
+      "marka": "Mitsubishi",
+      "tipus": "Lancer",
+      "rendszam": "RKL-611",
+      "gyartasiev": "2011",
+      "szin": "fehér"
+    },
+    {
+      "id": "5",
+      "marka": "Toyota",
+      "tipus": "Auris",
+      "rendszam": "AIFG-089",
+      "gyartasiev": "2008",
+      "szin": "kék"
+    },
+    {
+      "id": "a00e",
+      "marka": "Kia",
+      "tipus": "Rio",
+      "gyartasiev": "2009",
+      "rendszam": "TRE-549",
+      "szin": "kék"
+    },
+    {
+      "id": "551d",
+      "marka": "Ford",
+      "tipus": "Focus",
+      "gyartasiev": "2010",
+      "rendszam": "RKE564",
+      "szin": "piros"
+    },
+    {
+      "id": "6c75",
+      "marka": "Fiat",
+      "tipus": "Bravo",
+      "rendszam": "LOL-331",
+      "gyartasiev": "2011",
+      "szin": "fehér"
+    }
+  ]
 }
