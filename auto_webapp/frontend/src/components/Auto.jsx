@@ -8,6 +8,20 @@ function Auto({ auto }) {
   const modositas=(auto)=>{
     navigate('/modauto',{state:{auto}});    
   }
+
+  const torles=(id)=>{
+     fetch(`${import.meta.env.VITE_BASE_URL}/autok/${id}`,{
+      method:'DELETE',
+      headers:{
+        'Content-type':'application/json'
+      }      
+    })
+    .then(res=>res.text())
+    .then(valasz=>{alert(valasz);navigate('/')})
+    .catch(err=>alert(err));
+  }
+
+
   return (
     <div className="card card-border bg-indigo-200 m-5 w-96">
       <div className="card-body">
@@ -19,7 +33,7 @@ function Auto({ auto }) {
         <p>{auto.szin}</p>
         <div className="card-actions justify-end">
           <button onClick={()=>modositas(auto)} className="btn btn-primary">Módosítás</button>
-          <button className="btn btn-primary">Törlés</button>
+          <button onClick={()=>torles(auto.id)} className="btn btn-primary">Törlés</button>
         </div>
       </div>
     </div>
