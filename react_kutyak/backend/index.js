@@ -26,6 +26,34 @@ app.get('/kutyanevek',(req,res)=>{
     })
 });
 
+app.post('/kutyanevek',(req,res)=>{
+    console.log(req.body);
+    db.run("insert into kutyanevek (kutyanev) values(?)"
+    ,[req.body.kutyanev],(err)=>{
+        if(err){
+            res.status(400).send(err);
+        } else {
+            res.status(200).json({message:"Adat beszúrva!"})
+        }
+    })
+
+});
+
+app.put('/kutyanevek',(req,res)=>{
+    const{Id,kutyanev}=req.body;
+    
+    db.run("UPDATE kutyanevek SET kutyanev=? WHERE id=?"
+    ,[kutyanev,Id]
+    ,(err)=>{
+        if(err){
+            res.status(400).send(err);
+        } else {
+            res.status(200).json({message:"Adat módosítva!"})
+        }
+    });
+
+});
+
 app.get('/kutyafajtak',(req,res)=>{
     db.all("select * from kutyafajtak",(err,rows)=>{
         if(err){
