@@ -6,7 +6,7 @@ function Menu() {
       <div className="flex-1">
         <Link to='/' className="btn btn-ghost text-xl">Rendelő</Link>
       </div>
-      <div className="flex-none">
+      <div className="z-10 flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
             <a>Link</a>
@@ -16,7 +16,7 @@ function Menu() {
               <summary>Kutyanevek</summary>
               <ul className="bg-lime-100 rounded-t-none p-2">
                 <li>
-                  <a>Új kutyanév rögzítése</a>
+                  <Link to='/kutyanevform'>Új kutyanév rögzítése</Link>
                 </li>
                 <li>
                   <Link to='/kutyanevek'>Kutyanevek listája</Link>
@@ -29,7 +29,7 @@ function Menu() {
               <summary>Kutyafajták</summary>
               <ul className="bg-lime-100 rounded-t-none p-2">
                 <li>
-                  <a>Új kutyafajta rögzítése</a>
+                  <Link to='/kutyafajtaform'>Új kutyafajta rögzítése</Link>
                 </li>
                 <li>
                   <Link to='/kutyafajtak'>Kutyafajták listája</Link>
@@ -42,7 +42,7 @@ function Menu() {
               <summary>Rendelési adatok</summary>
               <ul className="bg-lime-100 rounded-t-none p-2">
                 <li>
-                  <a>Új rendelési adat rögzítése</a>
+                  <Link to='/kutyaform'>Új rendelési adat rögzítése</Link>
                 </li>
                 <li>
                   <Link to='/kutyak'>Rendelési adatok listája</Link>

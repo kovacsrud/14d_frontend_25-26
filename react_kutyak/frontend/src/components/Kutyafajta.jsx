@@ -1,8 +1,25 @@
 
 
-function Kutyafajta() {
+function Kutyafajta({kutyafajta}) {
   return (
-    <div>Kutyafajta</div>
+    <div className="card m-5 w-96 bg-lime-100 text-lime-800 card-md shadow-sm">
+      <div className="card-body">
+        <h2 className="card-title">{kutyafajta.nev}</h2>
+        <p>
+          Id:{kutyafajta.Id}
+        </p>
+        <p>
+          Eredeti név:{kutyafajta.eredetinev}
+        </p>
+        <div className="justify-end card-actions">
+          <button className="btn btn-primary">Módosítás</button>
+          <button className="btn btn-primary">Törlés</button>
+        </div>
+        <div className="justify-end card-actions">
+          
+        </div>
+      </div>
+    </div>
   )
 }
 
