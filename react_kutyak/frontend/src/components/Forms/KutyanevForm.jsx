@@ -40,7 +40,7 @@ function KutyanevForm() {
 
   return (
     <div>
-        <h1 className="text-2xl text-center">{cim}</h1>
+        <h1 className="text-2xl text-center m-10">{cim}</h1>
         <form onSubmit={onSubmit}>
             <div className="grid grid-cols-1 justify-items-center">
                 <input id="kutyanev" type="text" required value={formData.kutyanev} onChange={writeData} placeholder="kutya neve" className="input input-success" />

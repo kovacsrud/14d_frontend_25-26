@@ -1,11 +1,19 @@
 import {useNavigate} from 'react-router-dom';
+import {useContext,useState} from 'react';
+import KutyaContext from '../context/KutyaContext';
 
 function Kutyanev({ kutyanev }) {
 
   const navigate=useNavigate();
+  const {backendMuvelet}=useContext(KutyaContext);
 
   const modosit=()=>{
     navigate('/kutyanevform',{state:{kutyanev}})
+  }
+
+  const torol=()=>{
+    const url=`${import.meta.env.VITE_BASE_URL}/kutyanevek`;
+    backendMuvelet(kutyanev,"DELETE",url);
   }
 
 
@@ -18,7 +26,7 @@ function Kutyanev({ kutyanev }) {
         </p>
         <div className="justify-end card-actions">
           <button onClick={()=>modosit()} className="btn btn-primary">Módosítás</button>
-          <button className="btn btn-primary">Törlés</button>
+          <button onClick={()=>torol()} className="btn btn-primary">Törlés</button>
         </div>
         <div className="justify-end card-actions">
           

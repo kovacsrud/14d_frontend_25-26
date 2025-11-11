@@ -27,9 +27,11 @@ app.get('/kutyanevek',(req,res)=>{
 });
 
 app.post('/kutyanevek',(req,res)=>{
-    console.log(req.body);
+
+    const{kutyanev}=req.body;
+    //console.log(req.body);
     db.run("insert into kutyanevek (kutyanev) values(?)"
-    ,[req.body.kutyanev],(err)=>{
+    ,[kutyanev],(err)=>{
         if(err){
             res.status(400).send(err);
         } else {
@@ -53,6 +55,20 @@ app.put('/kutyanevek',(req,res)=>{
     });
 
 });
+
+app.delete('/kutyanevek',(req,res)=>{
+    const{Id}=req.body;
+    db.run("DELETE from kutyanevek WHERE id=?"
+    ,[Id]
+    ,(err)=>{
+        if(err){
+            res.status(400).send(err);
+        } else {
+            res.status(200).json({message:"Adat törölve!"})
+        }
+     }
+    )
+})
 
 app.get('/kutyafajtak',(req,res)=>{
     db.all("select * from kutyafajtak",(err,rows)=>{
