@@ -51,12 +51,12 @@ function KutyaForm() {
       <h1 className="text-2xl text-center m-10">{cim}</h1>
       <form onSubmit={onSubmit}>
         <div className="grid grid-cols-1 justify-items-center">
-          <select id="nevid" onChange={writeData} value={formData.nevid}  className="select select-accent">
+          <select id="nevid" onChange={writeData} value={formData.nevid}  className="my-5 select select-accent">
             {
               kutyanevek.map((kutyanev,i)=>(<option key={i} value={kutyanev.Id}>{kutyanev.kutyanev}</option>))
             }          
           </select>
-          <select id="fajtaid" onChange={writeData} value={formData.fajtaid}  className="select select-accent">
+          <select id="fajtaid" onChange={writeData} value={formData.fajtaid}  className="my-5 select select-accent">
             {
               kutyafajtak.map((kutyafajta,i)=>(<option key={i} value={kutyafajta.Id}>{kutyafajta.nev}</option>))
             }            
@@ -68,7 +68,7 @@ function KutyaForm() {
             value={formData.eletkor}
             onChange={writeData}
             placeholder="kutya életkora"
-            className="input input-success"
+            className="my-5 input input-success"
           />
           <input
             id="utolsoell"
@@ -77,7 +77,7 @@ function KutyaForm() {
             value={formData.utolsoell}
             onChange={writeData}
             placeholder="utolsó ellenőrzés"
-            className="input input-success"
+            className="my-5 input input-success"
           />
           <button className="m-5 btn btn-success">Küldés</button>
         </div>
