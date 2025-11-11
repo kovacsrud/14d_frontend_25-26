@@ -38,7 +38,7 @@ function Kutya({kutya}) {
 
   return (
     <div className="card m-5 w-96 bg-lime-100 text-lime-800 card-md shadow-sm">
-       {
+      {
         isModify && (<Modal2 title="Módosítás" body="Biztosan módosítja?" commitFunction={()=>modosit()} closeFunction={()=>closeModify()} />)
       }
       {

@@ -92,11 +92,11 @@ app.post('/kutyafajtak',(req,res)=>{
     })
 })
 
-app.patch('/kutyafajtak',(req,res)=>{
-    const{id,nev,eredetinev}=req.body;
+app.put('/kutyafajtak',(req,res)=>{
+    const{Id,nev,eredetinev}=req.body;
     console.log(req.body);
     db.run("UPDATE kutyafajtak SET nev=?,eredetinev=? WHERE id=?"
-    ,[nev,eredetinev,id]
+    ,[nev,eredetinev,Id]
     ,(err)=>{
         if(err){
             res.status(400).send(err);
@@ -107,9 +107,9 @@ app.patch('/kutyafajtak',(req,res)=>{
 });
 
 app.delete('/kutyafajtak',(req,res)=>{
-   const{id}=req.body;
+   const{Id}=req.body;
    db.run("DELETE FROM kutyafajtak WHERE id=?"
-   ,[id]
+   ,[Id]
    ,(err)=>{
         if(err){
             res.status(400).send(err);
