@@ -39,7 +39,7 @@ const telepules=(req,res)=>{
                 return res.status(400).json(err);
             }
             if(rows.length>0){
-                return res.status(200).json(rows);
+                return res.status(200).json(rows[0]);
             }
             return res.status(400).json({message:"Nincs ilyen település!"})
         
