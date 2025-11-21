@@ -34,7 +34,8 @@ export const TelepulesProvider=({children})=>{
         telepulesnevek,
         telepules,
         setSelectedTelepules,
-        selectedTelepules
+        selectedTelepules,
+        getTelepules
     }}>{children}</TelepulesContext.Provider>
 }
 
