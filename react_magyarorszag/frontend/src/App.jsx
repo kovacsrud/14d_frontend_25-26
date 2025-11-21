@@ -3,11 +3,14 @@ import Megyek from "./components/Megyek";
 import Jogallasok from "./components/Jogallasok";
 import Telepulesek from "./components/Telepulesek";
 import TelepulesAdatok from "./components/TelepulesAdatok";
-import { TelepulesProvider } from "./context/TelepulesContext";
+import MegyeTelepulesek from "./components/MegyeTelepulesek";
 
+import { TelepulesProvider } from "./context/TelepulesContext";
+import { MegyeProvider } from "./context/MegyeContext";
+import { JogallasProvider } from "./context/JogallasContext";
 
 import { BrowserRouter,Routes,Route,Navigate } from "react-router-dom";
-import { MegyeProvider } from "./context/MegyeContext";
+
 
 function App() {
   
@@ -15,6 +18,7 @@ function App() {
   return (
    
       <div>
+        <JogallasProvider>
         <MegyeProvider>
         <TelepulesProvider>
           <BrowserRouter>
@@ -24,12 +28,14 @@ function App() {
                 <Route path="/jogallasok" element={<Jogallasok />} />
                 <Route path="/telepulesek" element={<Telepulesek />} />
                 <Route path="/telepulesadatok" element={<TelepulesAdatok />} />
+                <Route path="/megyetelepulesek" element={<MegyeTelepulesek />} />
                 <Route path="*" element={<Navigate to="/" />} />
 
             </Routes>
           </BrowserRouter>
         </TelepulesProvider>
         </MegyeProvider>
+        </JogallasProvider>
         
       </div>
   )
