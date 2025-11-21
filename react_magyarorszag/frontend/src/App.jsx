@@ -5,7 +5,9 @@ import Telepulesek from "./components/Telepulesek";
 import TelepulesAdatok from "./components/TelepulesAdatok";
 import { TelepulesProvider } from "./context/TelepulesContext";
 
+
 import { BrowserRouter,Routes,Route,Navigate } from "react-router-dom";
+import { MegyeProvider } from "./context/MegyeContext";
 
 function App() {
   
@@ -13,6 +15,7 @@ function App() {
   return (
    
       <div>
+        <MegyeProvider>
         <TelepulesProvider>
           <BrowserRouter>
             <Routes>
@@ -26,6 +29,7 @@ function App() {
             </Routes>
           </BrowserRouter>
         </TelepulesProvider>
+        </MegyeProvider>
         
       </div>
   )
