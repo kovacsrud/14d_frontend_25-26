@@ -4,8 +4,6 @@ import { useEffect,useState,useContext } from 'react';
 import TelepulesContext from '../context/TelepulesContext';
 
 
-
-
 function Terkep({szeles,magas,zoom}) {
     const {selectedTelepules}=useContext(TelepulesContext);
      const[telepules,setTelepules]=useState({});
