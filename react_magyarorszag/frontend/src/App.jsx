@@ -22,7 +22,7 @@ function App() {
         <JogallasProvider>
         <MegyeProvider>
         <TelepulesProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/magyarorszag_2025">
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/megyek" element={<Megyek />} />
