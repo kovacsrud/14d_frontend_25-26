@@ -4,6 +4,7 @@ import Jogallasok from "./components/Jogallasok";
 import Telepulesek from "./components/Telepulesek";
 import TelepulesAdatok from "./components/TelepulesAdatok";
 import MegyeTelepulesek from "./components/MegyeTelepulesek";
+import JogallasTelepulesek from "./components/JogallasTelepulesek";
 
 import { TelepulesProvider } from "./context/TelepulesContext";
 import { MegyeProvider } from "./context/MegyeContext";
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/telepulesek" element={<Telepulesek />} />
                 <Route path="/telepulesadatok" element={<TelepulesAdatok />} />
                 <Route path="/megyetelepulesek" element={<MegyeTelepulesek />} />
+                <Route path="/jogallastelepulesek" element={<JogallasTelepulesek />} />
                 <Route path="*" element={<Navigate to="/" />} />
 
             </Routes>
