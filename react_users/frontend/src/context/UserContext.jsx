@@ -10,7 +10,8 @@ export const UserProvider=({children})=>{
     }
 
     const logout=()=>{
-        sessionStorage.removeItem('usertoken');        
+        sessionStorage.removeItem('usertoken');    
+        update();    
     }
 
 
