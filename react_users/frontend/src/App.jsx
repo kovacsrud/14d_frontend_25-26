@@ -1,4 +1,10 @@
-
+import { UserProvider } from "./context/UserContext";
+import Main from "./components/Main";
+import Menu from "./components/Menu";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Vedett from "./components/Vedett";
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
 
 function App() {
   
@@ -6,7 +12,18 @@ function App() {
   return (
    
       <div>
-        <h1 className="text-3xl font-bold text-center text-sky-500">Tailwind CSS</h1>
+        <UserProvider>
+          <BrowserRouter>
+            <Menu />
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/vedett" element={<Vedett />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </BrowserRouter>
+        </UserProvider>
         
       </div>
   )
