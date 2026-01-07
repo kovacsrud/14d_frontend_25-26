@@ -40,12 +40,60 @@ type Login={
     sha256:string
 }
 
+type DateAge={
+    date:string,
+    age:number
+}
+
+type Id={
+    name:string,
+    value:string
+}
+
+type Picture={
+    large:string,
+    medium:string,
+    thumbnail:string
+}
+
+type Result={
+    gender:string,
+    name:Name,
+    location:Location,
+    email:string,
+    login:Login,
+    dob:DateAge,
+    registered:DateAge,
+    phone:string,
+    cell:string,
+    id:Id,
+    picture:Picture,
+    nat:string
+}
 
 
 
 function RandomUser() {
+    const[users,setUsers]=useState(Array<Result>);
+
+    const getUsers=()=>{
+        fetch("https://randomuser.me/api/?results=10")
+        .then(res=>res.json())
+        .then(adat=>setUsers(adat.results))
+        .catch(err=>alert(err));
+    }
+
+    useEffect(()=>{
+        getUsers();
+    },[])
+
   return (
-    <div>RandomUser</div>
+    <div>
+         <h3 className="text-xl font-bold text-center">Users:</h3>
+         {
+            users.map((user)=>(<p key={user.id.value}>{user.name.title} {user.name.first} {user.name.last}</p>))
+         }
+    </div>
   )  
 }
 
