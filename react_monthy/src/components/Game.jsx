@@ -44,7 +44,28 @@ function Game() {
     }
 
     const buttonSelect=(e)=>{
+        const valasztottAjto=e.target.value;
 
+        if(!utolsoNyitas.current && elsoNyitas.current){
+            utolsoNyitas.current=true;
+            utolsoValasztottAjto.current=valasztottAjto;
+            if(valasztottAjto==autoPoz.current){
+                gameStatus.current="Nyertél!";
+                if(elsoValasztottAjto.current==utolsoValasztottAjto.current){
+                    csereNelkulNyertes.current++;
+                }else {
+                    cserevelNyertes.current++;
+                }
+            } else {
+                gameStatus.current="Vesztettél!"
+                if(elsoValasztottAjto.current==utolsoValasztottAjto.current){
+                    csereNelkulVesztes.current++;
+                }else {
+                    cserevelVesztes.current++;
+                }
+            }
+
+        }
     }
 
     
