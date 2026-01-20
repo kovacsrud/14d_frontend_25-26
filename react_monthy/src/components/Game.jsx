@@ -41,6 +41,9 @@ function Game() {
         setDoors(ajtok.current);
         autoPoz.current=randNum(0,2);
         ajtokMogott.current[autoPoz.current]=3;
+        document.getElementById('0').removeAttribute('disabled');
+        document.getElementById('1').removeAttribute('disabled');
+        document.getElementById('2').removeAttribute('disabled');
     }
 
     const buttonSelect=(e)=>{
@@ -65,6 +68,7 @@ function Game() {
                 }
             }
             ajtok.current=ajtokMogott.current;
+            setDoors(ajtok.current);
 
         }
 
@@ -72,13 +76,15 @@ function Game() {
             elsoNyitas.current=true;
             //Mutatunk egy ajtót, ami mögöt kecske van
             //Kigyűjtjük, mely elemek jelölnek kecskéket
-            const kecskek=ajtokMogott.current.map((ajto,i)=>(ajto!==3 ? i:-1).filter(x=>x!==-1));
+            const kecskek=ajtokMogott.current.map((ajto,i)=>(ajto!==3 ? i:-1)).filter(x=>x!==-1);
             let kecskeAjto=kecskek[randNum(0,kecskek.length)];
             elsoValasztottAjto.current=valasztottAjto;
 
             while(kecskeAjto==valasztottAjto || kecskeAjto==undefined){
                 kecskeAjto=kecskek[randNum(0,kecskek.length)];
             }
+
+            document.getElementById(kecskeAjto).setAttribute('disabled',"");
 
             changeDoor(kecskeAjto,2);
         }
@@ -99,6 +105,26 @@ function Game() {
         </div>
         <div className="grid grid-cols-1 justify-items-center m-5">
             <button onClick={gameInit} className="btn btn-outline">Új játék</button>
+        </div>
+        <h1 className="text-3xl text-center font-bold">{gameStatus.current}</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 lg:mt-20">
+            <div className="bg-transparent border text-center">
+                <p className="text-5xl px-10 py-5">{cserevelNyertes.current}</p>
+                <p className="px-10 py-5">Cserével nyert</p>
+            </div>
+            <div className="bg-transparent border text-center">
+                <p className="text-5xl px-10 py-5">{csereNelkulNyertes.current}</p>
+                <p className="px-10 py-5">Csere nélkül nyert</p>
+            </div>
+            <div className="bg-transparent border text-center">
+                <p className="text-5xl px-10 py-5">{cserevelVesztes.current}</p>
+                <p className="px-10 py-5">Cserével veszített</p>
+            </div>
+            <div className="bg-transparent border text-center">
+                <p className="text-5xl px-10 py-5">{csereNelkulVesztes.current}</p>
+                <p className="px-10 py-5">Csere nélkül veszített</p>
+            </div>
+
         </div>
     </div>
   )
