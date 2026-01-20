@@ -64,8 +64,25 @@ function Game() {
                     cserevelVesztes.current++;
                 }
             }
+            ajtok.current=ajtokMogott.current;
 
         }
+
+        if(!elsoNyitas.current){
+            elsoNyitas.current=true;
+            //Mutatunk egy ajtót, ami mögöt kecske van
+            //Kigyűjtjük, mely elemek jelölnek kecskéket
+            const kecskek=ajtokMogott.current.map((ajto,i)=>(ajto!==3 ? i:-1).filter(x=>x!==-1));
+            let kecskeAjto=kecskek[randNum(0,kecskek.length)];
+            elsoValasztottAjto.current=valasztottAjto;
+
+            while(kecskeAjto==valasztottAjto || kecskeAjto==undefined){
+                kecskeAjto=kecskek[randNum(0,kecskek.length)];
+            }
+
+            changeDoor(kecskeAjto,2);
+        }
+
     }
 
     
