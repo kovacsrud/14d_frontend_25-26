@@ -1,0 +1,36 @@
+<div>
+    <h2 class="text-2xl text-center font-bold text-sky-900">Lista példa</h2>
+    <div class="flex flex-col items-center">
+        <ul>
+
+        @if(nevek.length>0)    {
+        @for(nev of nevek;track nev){
+            <li>{{nev}}</li>
+        }
+        } @else {
+            <ng-container *ngTemplateOutlet="ureslista"></ng-container>
+        }
+        </ul>
+
+        @if(nevek.length<=10){
+            <div class="flex flex-col items-center">
+                <form>
+                    <input id="nev" type="text" placeholder="Név" />
+                    <button class="btn btn-secondary">Hozzáadás</button>
+                </form>
+            </div>
+
+        } @else {
+            <ng-container *ngTemplateOutlet="telelista"></ng-container>
+        }
+
+   
+    </div>
+</div>
+
+<ng-template #ureslista>
+    <p class="text-2xl text-center text-red-500">A lista üres!</p>
+</ng-template>
+<ng-template #telelista>
+    <p class="text-2xl text-center text-red-500">A lista megtelt!</p>
+</ng-template>
