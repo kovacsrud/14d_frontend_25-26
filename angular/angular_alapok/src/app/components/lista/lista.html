@@ -5,16 +5,16 @@
 
         @if(nevek.length>0)    {
         @for(nev of nevek;track nev){
-            <li>{{nev}}</li>
+            <li class="m-5">{{$index+1}}-{{nev}} <button (click)="nevTorles($index)" class="btn btn-primary">Törlés</button></li>
         }
         } @else {
             <ng-container *ngTemplateOutlet="ureslista"></ng-container>
         }
         </ul>
 
-        @if(nevek.length<=10){
+        @if(nevek.length<10){
             <div class="flex flex-col items-center">
-                <form>
+                <form (submit)="nevHozzaad($event)">
                     <input id="nev" type="text" placeholder="Név" />
                     <button class="btn btn-secondary">Hozzáadás</button>
                 </form>
