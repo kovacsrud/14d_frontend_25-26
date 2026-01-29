@@ -1,0 +1,31 @@
+<h1 class="text-3xl text-center text-red-700" >Random Users</h1>
+
+<app-select (kivalasztott)="getUserNumber($event)" />
+
+<div class="flex flex-row flex-wrap items-center justify-center">
+    @if(isLoading){
+    <h3 class="text-2xl text-center text-red-600">Betöltés...</h3>
+} @else{
+    <ng-container *ngTemplateOutlet="userlista"></ng-container>
+} 
+    
+</div>
+
+
+
+
+<ng-template #userlista>
+    @if(userList.length>0){
+        @for(user of userList;track user){
+            <p>{{user.name.title}} {{user.name.first}} {{user.name.last}}</p>
+        }
+
+    } @else {
+        <ng-container *ngTemplateOutlet="ureslista"></ng-container>
+    }
+</ng-template>
+
+
+<ng-template #ureslista>
+    <p class="text-2xl text-center text-red-500">A lista üres!</p>
+</ng-template>

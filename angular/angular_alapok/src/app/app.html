@@ -1,8 +1,9 @@
 
 <app-header [headerSzoveg]="'Angular header'" />
 <app-header [headerSzoveg]="'Másik címsor1'" />
-<app-select (kivalasztott)="getSelect($event)" />
+
 <p class="text-center">{{selectErtek}}</p>
+<app-randuser />
 <app-lista />
 
 <router-outlet />
