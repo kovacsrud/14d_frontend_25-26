@@ -1,4 +1,4 @@
-export interface Character {
+export interface SingleCharacter {
     id:number,
     name:string,
     status:string,

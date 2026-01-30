@@ -1,1 +1,13 @@
-<p>characters works!</p>
+<h1 class="text-2xl text-center text-sky-800">Characters:</h1>
+
+<h2 class="text-2xl">Lista db:{{results.length}}</h2>
+
+<div class="flex flex-row flex-wrap items-center justify-center">
+
+@if(results.length>0){
+    @for(result of results;track result){
+        <app-character [result]="result" />
+    }
+}
+
+</div>
