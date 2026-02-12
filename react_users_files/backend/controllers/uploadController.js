@@ -33,7 +33,7 @@ const fileUpload=async (req,res)=>{
         }
     }
 
-    res.json({messag:"Feltöltés kész!"});
+    res.json({message:"Feltöltés kész!"});
 
 }
 

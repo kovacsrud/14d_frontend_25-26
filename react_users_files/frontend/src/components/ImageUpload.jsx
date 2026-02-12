@@ -20,6 +20,9 @@ function ImageUpload() {
         for(let i=0;i<images.length;i++){
             formData.append("file"+i,images[i]);
         }
+        kuldes(formData);
+     
+        navigate('/images');
 
     }
 
@@ -32,7 +35,7 @@ function ImageUpload() {
             body:adat
         })
         .then(res=>res.json())
-        .then(valasz=>alert(valasz.message))
+        .then(valasz=>{update();alert(valasz.message)})
         .catch(err=>alert(err));
 
     }
