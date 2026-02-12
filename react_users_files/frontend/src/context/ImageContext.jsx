@@ -18,7 +18,7 @@ export const ImageProvider=({children})=>{
             body:JSON.stringify({"imageId":imageId})
         })
         .then(res=>res.json())
-        .then(valasz=>alert(valasz))
+        .then(valasz=>{update();alert(valasz.message)})
         .catch(err=>alert(err));
 
     }
