@@ -20,6 +20,12 @@ function Menu() {
               <Link to="/vedett">Védett info</Link>
              </li>
              <li>
+              <Link to="/images">Képek</Link>
+             </li>
+             <li>
+              <Link to="/imageupload">Képek feltöltése</Link>
+             </li>
+             <li>
               <a onClick={()=>{logout();navigate("/")}} >Kilépés</a>
              </li>                    
 
