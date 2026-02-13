@@ -24,6 +24,8 @@ const getImagesBin=async (req,res)=>{
 
 const deleteImageBin=async (req,res)=>{
     const {imageId}=req.body;
+    console.log(req.body);
+    console.log("imageId:"+imageId);
     const image=await ImageBin.findById(imageId);
     if(!image){
         return res.json({message:"A kép nem törölhető!"});
@@ -40,6 +42,8 @@ const deleteImageBin=async (req,res)=>{
 
 const deleteImage=async (req,res)=>{
     const {imageId}=req.body;
+    console.log(req.body);
+    console.log("imageId:"+imageId);
     const image=await Image.findById(imageId);
     if(!image){
         return res.json({message:"A kép nem törölhető!"});

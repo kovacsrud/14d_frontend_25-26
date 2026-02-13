@@ -1,6 +1,6 @@
 import {useState,useContext,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Image from './Image';
+import ImageBin from './ImageBin';
 import UserContext from '../context/UserContext';
 
 
@@ -43,9 +43,12 @@ function ImagesBin() {
   return (
     <div>
         <h2 className='text-2xl text-center font-bold'>Képek (bin)</h2>
+        <div className='flex flex-row flex-wrap items-center justify-center'>
         {
-            binImages.map((image,i)=>(<img key={i} className='w-48' src={image} />))
+           // binImages.map((image,i)=>(<img key={i} className='w-48' src={image} />))
+           images.map((image,i)=>(<ImageBin image={image} data={binImages[i]} />))
         }
+        </div>
     </div>
   )
 }

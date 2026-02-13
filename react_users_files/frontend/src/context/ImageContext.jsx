@@ -23,9 +23,24 @@ export const ImageProvider=({children})=>{
 
     }
 
+    const imgDeleteBin=(imageId)=>{
+        fetch(`${import.meta.env.VITE_BASE_URL}/api/imagesbin`,{
+            method:'DELETE',
+            headers:{
+                "Content-type":"application/json",
+                "Authorization":`Bearer ${token}`
+            },
+            body:JSON.stringify({"imageId":imageId})
+        })
+        .then(res=>res.json())
+        .then(valasz=>{update();alert(valasz.message)})
+        .catch(err=>alert(err));
+
+    }
 
 
-    return <ImageContext.Provider value={{imgDelete}}>{children}</ImageContext.Provider>
+
+    return <ImageContext.Provider value={{imgDelete,imgDeleteBin}}>{children}</ImageContext.Provider>
 }
 
 
