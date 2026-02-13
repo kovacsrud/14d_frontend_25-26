@@ -3,6 +3,7 @@ const mongoose=require('mongoose');
 const {dirname}=require('path');
 const appDir=dirname(require.main.filename);
 const Image=require('../model/Image');
+const ImageBin=require('../model/ImageBin');
 
 const getImages=async (req,res)=>{
     const images=await Image.find({userid:req.user._id});
@@ -11,6 +12,30 @@ const getImages=async (req,res)=>{
     }
 
     res.json({path:"/files/"+req.user.username,images:images})
+}
+
+const getImagesBin=async (req,res)=>{
+    const images=await ImageBin.find({userid:req.user._id});
+    if(!images){
+        return res.json({message:"Nincsenek feltöltött képek!"});
+    }
+    res.json(images);
+}
+
+const deleteImageBin=async (req,res)=>{
+    const {imageId}=req.body;
+    const image=await ImageBin.findById(imageId);
+    if(!image){
+        return res.json({message:"A kép nem törölhető!"});
+    }
+    try {
+        await ImageBin.findOneAndDelete({userid:req.user._id,_id:imageId});
+        return res.json({message:"A kép törölve!"});
+    }
+    catch(error){
+        return res.json({message:error});
+    }
+
 }
 
 const deleteImage=async (req,res)=>{
@@ -36,4 +61,4 @@ const deleteImage=async (req,res)=>{
 }
 
 
-module.exports={getImages,deleteImage}
+module.exports={getImages,deleteImage,getImagesBin,deleteImageBin}
