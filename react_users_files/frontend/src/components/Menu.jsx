@@ -26,6 +26,12 @@ function Menu() {
               <Link to="/imageupload">Képek feltöltése</Link>
              </li>
              <li>
+              <Link to="/imagesbin">Képek(bin)</Link>
+             </li>
+             <li>
+              <Link to="/imageuploadbin">Képek feltöltése(bin)</Link>
+             </li>
+             <li>
               <a onClick={()=>{logout();navigate("/")}} >Kilépés</a>
              </li>                    
 
