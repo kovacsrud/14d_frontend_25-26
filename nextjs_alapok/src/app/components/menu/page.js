@@ -11,7 +11,7 @@ export default function Menu() {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link href="/components/posts">Posts</Link></li>
                     <li><Link href="/components/servercustomers">Customers</Link></li>
-                    <li><a>Link</a></li>
+                    <li><Link href="/components/income">Szűrés</Link></li>
                    
                 </ul>
             </div>
