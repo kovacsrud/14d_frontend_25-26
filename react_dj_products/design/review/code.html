@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#2559bd",
+              "surface-container": "#eceef0",
+              "secondary-fixed": "#dae2ff",
+              "outline-variant": "#c3c6d5",
+              "primary-fixed-dim": "#b1c5ff",
+              "secondary": "#4e5e85",
+              "primary-container": "#0047ab",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#00513c",
+              "on-primary": "#ffffff",
+              "background": "#f7f9fb",
+              "on-surface": "#191c1e",
+              "surface-variant": "#e0e3e5",
+              "on-secondary-fixed-variant": "#37466c",
+              "inverse-primary": "#b1c5ff",
+              "inverse-surface": "#2d3133",
+              "tertiary-fixed-dim": "#2ee0ad",
+              "tertiary-fixed": "#58fdc8",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f2f4f6",
+              "outline": "#737784",
+              "inverse-on-surface": "#eff1f3",
+              "on-background": "#191c1e",
+              "surface-bright": "#f7f9fb",
+              "tertiary-container": "#005842",
+              "tertiary": "#003f2e",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#d8dadc",
+              "on-primary-fixed": "#001946",
+              "on-primary-container": "#a5bdff",
+              "on-tertiary-container": "#19d7a5",
+              "on-primary-fixed-variant": "#00419e",
+              "on-secondary-fixed": "#081a3e",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#434653",
+              "primary-fixed": "#dae2ff",
+              "secondary-fixed-dim": "#b6c6f3",
+              "on-tertiary-fixed": "#002116",
+              "surface-container-highest": "#e0e3e5",
+              "primary": "#00327d",
+              "secondary-container": "#c1d1ff",
+              "surface-container-high": "#e6e8ea",
+              "on-secondary-container": "#4a5980",
+              "on-error-container": "#93000a",
+              "surface": "#f7f9fb"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto font-['Manrope'] antialiased">
+<div class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">Azure Horizon</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Browse</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 pb-1" href="#">Reviews</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Support</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Account</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-600">shopping_cart</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header Section -->
+<div class="mb-16">
+<h1 class="font-headline text-5xl font-extrabold tracking-tight text-primary mb-4">Customer Perspectives</h1>
+<p class="font-body text-secondary text-lg max-w-2xl leading-relaxed">
+                Join our community of enthusiasts. We believe in transparency and the architectural integrity of every review shared by our global patrons.
+            </p>
+</div>
+<!-- Stats Bento-ish Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex items-center justify-between">
+<div>
+<h2 class="font-headline text-3xl font-bold text-primary mb-1">4.9 / 5.0</h2>
+<div class="flex gap-1 mb-3">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Based on 1,240 verified purchases</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-lg font-headline font-semibold text-sm hover:shadow-lg transition-all active:scale-95">
+                    Write a Review
+                </button>
+</div>
+<div class="bg-tertiary-container text-on-tertiary-container rounded-xl p-8 flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h3 class="font-headline text-xl font-bold">100% Authentic</h3>
+<p class="text-on-tertiary-container/80 text-sm mt-2">Every word is written by a real user with a verified order history.</p>
+</div>
+</div>
+<!-- Review Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col h-full border border-outline-variant/15">
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-on-surface text-base leading-relaxed mb-8 italic">"Fantastic product, very satisfied! The attention to detail in the Azure Horizon suite is unlike anything else on the market today."</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">KJ</div>
+<div>
+<p class="font-headline text-sm font-bold text-on-surface">Kovács János</p>
+<p class="font-label text-xs text-on-surface-variant">2024. március 15.</p>
+</div>
+</div>
+<p class="mt-3 font-label text-[10px] tracking-wider text-outline uppercase">janos.kovacs@example.com</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col h-full border border-outline-variant/15">
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-on-surface text-base leading-relaxed mb-8 italic">"The user interface is seamless. It feels like a premium digital atelier experience. Highly recommend for enterprise teams."</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">NS</div>
+<div>
+<p class="font-headline text-sm font-bold text-on-surface">Nagy Szandra</p>
+<p class="font-label text-xs text-on-surface-variant">2024. március 12.</p>
+</div>
+</div>
+<p class="mt-3 font-label text-[10px] tracking-wider text-outline uppercase">szandra.nagy@enterprise.hu</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col h-full border border-outline-variant/15">
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<p class="font-body text-on-surface text-base leading-relaxed mb-8 italic">"Remarkable performance. A few minor learning curves on the layout transitions, but the support team was incredibly responsive."</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">TP</div>
+<div>
+<p class="font-headline text-sm font-bold text-on-surface">Tóth Péter</p>
+<p class="font-label text-xs text-on-surface-variant">2024. március 10.</p>
+</div>
+</div>
+<p class="mt-3 font-label text-[10px] tracking-wider text-outline uppercase">peter.toth@techpulse.com</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col h-full border border-outline-variant/15">
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-on-surface text-base leading-relaxed mb-8 italic">"Exactly what we needed for our internal documentation system. The typography scale makes reading long specs a breeze."</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">VE</div>
+<div>
+<p class="font-headline text-sm font-bold text-on-surface">Varga Elena</p>
+<p class="font-label text-xs text-on-surface-variant">2024. március 08.</p>
+</div>
+</div>
+<p class="mt-3 font-label text-[10px] tracking-wider text-outline uppercase">elena.v@designstudio.hu</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col h-full border border-outline-variant/15">
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-on-surface text-base leading-relaxed mb-8 italic">"Elegant, robust, and reliable. Azure Horizon has set a new benchmark for what we expect from digital partners."</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">BM</div>
+<div>
+<p class="font-headline text-sm font-bold text-on-surface">Balogh Márk</p>
+<p class="font-label text-xs text-on-surface-variant">2024. március 05.</p>
+</div>
+</div>
+<p class="mt-3 font-label text-[10px] tracking-wider text-outline uppercase">m.balogh@cloudworks.com</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(25,28,30,0.06)] flex flex-col h-full border border-outline-variant/15">
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-tint text-xl" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<p class="font-body text-on-surface text-base leading-relaxed mb-8 italic">"Great experience overall. The dark mode integration is specifically well-handled, which is rare for such complex tools."</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">SZ</div>
+<div>
+<p class="font-headline text-sm font-bold text-on-surface">Szabó Zoltán</p>
+<p class="font-label text-xs text-on-surface-variant">2024. március 01.</p>
+</div>
+</div>
+<p class="mt-3 font-label text-[10px] tracking-wider text-outline uppercase">zoltan.szabo@freemail.hu</p>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More Area -->
+<div class="mt-20 text-center">
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-headline font-bold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+                Show More Insights
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl z-50">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 font-['Manrope'] text-xs font-medium">
+<span class="material-symbols-outlined mb-1">home</span>
+<span>Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 font-['Manrope'] text-xs font-medium">
+<span class="material-symbols-outlined mb-1">search</span>
+<span>Search</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-4 py-1 font-['Manrope'] text-xs font-medium">
+<span class="material-symbols-outlined mb-1">rate_review</span>
+<span>Reviews</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 font-['Manrope'] text-xs font-medium">
+<span class="material-symbols-outlined mb-1">person</span>
+<span>Profile</span>
+</div>
+</nav>
+</body></html>
